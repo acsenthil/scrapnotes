@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Page</title>
+</head>
+<body>
+    <h1>Process Page</h1>
+    <input type="checkbox" id="checkbox"> Check me!
+    <button id="btnsts" onclick="submit()">Submit</button>
+    <span id="message"></span>
+
+    <script>
+        function submit() {
+            const isChecked = document.getElementById('checkbox').checked;
+            const message = document.getElementById('message');
+            message.textContent = isChecked ? 'Checkbox is checked!' : 'Checkbox is not checked.';
+        }
+
+        // Optional: Retrieve and display the input value from index.html
+        window.onload = function() {
+            const inputValue = localStorage.getItem('inputValue');
+            if (inputValue) {
+                document.body.insertAdjacentHTML('afterbegin', `<p>You entered: ${inputValue}</p>`);
+            }
+        }
+    </script>
+</body>
+</html>

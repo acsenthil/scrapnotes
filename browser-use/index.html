@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    <h1>Welcome to the Index Page</h1>
+    <input type="text" id="textbox" placeholder="Enter something">
+    <button id="btn" onclick="navigateToProcess()">Go to Process Page</button>
+
+    <script>
+        function navigateToProcess() {
+            const inputValue = document.getElementById('textbox').value;
+            localStorage.setItem('inputValue', inputValue); // Store input value
+            window.location.href = 'process.html'; // Navigate to process page
+        }
+    </script>
+</body>
+</html>
