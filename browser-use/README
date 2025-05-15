@@ -1,0 +1,4 @@
+# 
+$ pip install browser-use
+$ playwright install
+$ python .\browser-use.py
